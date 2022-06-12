@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="7">
+    <listeners>
+        <listener class-name="Chatbot.Listener.TestListener"/>
+        <listener class-name="Chatbot.Listener.AnnotationTransformer"/>
+    </listeners>
+    <test name="Classes" >
+        <classes>
+            <class name="Chatbot.Averias"/>
+            <methods>
+                <include name="ConsultaPedidos"/>
+                <include name="SimDuplicada"/>
+                <include name="SimNueva"/>
+                <include name="Reclamaciones"/>
+                <include name="ProactividadAverias"/>
+            </methods>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
