@@ -82,7 +82,7 @@ public class AmazonPrime extends BaseTest {
     @Test(dataProvider = "AmazonPrimeInactivo")
     public void AmazonPrimeInactivo(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("AmazonPrimeInactivo", "");
+        startTest("AmazonPrimeInactivo", "This is a test");
 
         String resonse1 ="Veo que sigues teniendo dudas sobre Amazon Prime. ¿La última consulta que me hiciste sobre este servicio quedó resuelta?";
         String resonse2 ="Veo que no tienes contratado ninguno de los packs que tienen acceso exclusivo a Amazon Prime: Serielovers, Serielovers Clásico, Familylovers, Hogar Ilimitable o TV Plus x2.";
@@ -145,7 +145,7 @@ public class AmazonPrime extends BaseTest {
     @Test(dataProvider = "AmazonPrimeME")
     public void AmazonPrimeME(String userName, String password, String pathToEvidence) throws Exception{
 
-        startTest("AmazonPrimeME", "");
+        startTest("AmazonPrimeME", "This is a test");
 
         String resonse1 ="Veo que sigues teniendo dudas sobre Amazon Prime. ¿La última consulta que me hiciste sobre este servicio quedó resuelta?";
         String resonse2 ="Veo que no tienes Amazon Prime activado con Vodafone.";
