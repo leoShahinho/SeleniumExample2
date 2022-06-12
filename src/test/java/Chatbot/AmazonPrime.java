@@ -20,7 +20,7 @@ public class AmazonPrime extends BaseTest {
     public void AmazonPrimeActivo(String userName, String password, String pathToEvidence) throws InterruptedException {
 
 
-        startTest("AmazonPrimeActivo", "");
+        startTest("AmazonPrimeActivo", "This is a test for Amazon Prime active");
 
         String resonse1 ="Veo que sigues teniendo dudas sobre Amazon Prime. ¿La última consulta que me hiciste sobre este servicio quedó resuelta?";
         String resonse2 ="tienes Amazon Prime activado";
