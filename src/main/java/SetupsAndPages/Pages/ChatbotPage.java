@@ -165,11 +165,11 @@ public class ChatbotPage extends BasePage {
         Thread.sleep(10000);
         if (driver.findElements(By.xpath("(//*[text()='"+msgOption1+"'])["+(msgnumOp1+1)+"]")).size()<0){
             NewMessageCheck(msgOption1,msgnumOp1);
-            System.out.println("Relative msg is option 1");
+            System.out.println("Relative msg is firstOption");
          }
         else if(driver.findElements(By.xpath("(//*[text()='"+msgOption2+"'])["+(msgnumOp2+1)+"]")).size()<0){
             NewMessageCheck(msgOption2,msgnumOp2);
-            System.out.println("Relative msg is option 2");
+            System.out.println("Relative msg is SecondOption");
         }
     }
 
