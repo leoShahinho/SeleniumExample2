@@ -16,7 +16,7 @@ public class Caller_ID extends BaseTest {
 	@Test(dataProvider = "CallerIdPartis")
 	public void CallerIdPartis(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-		startTest("CallerIdPartis", "");
+		startTest("CallerIdPartis", "Client: "+userName+"/"+password);
 
 		String response1 = "Identificador de llamadas";
 		String response2 = "Activado";
@@ -80,7 +80,7 @@ public class Caller_ID extends BaseTest {
 	@Test(dataProvider = "CallerIdME")
 	public void CallerIdME(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-		startTest("CallerIdME", "");
+		startTest("CallerIdME", "Client: "+userName+"/"+password);
 
 		String response1 = "Identificador de llamadas";
 		String response2 = "Activado";

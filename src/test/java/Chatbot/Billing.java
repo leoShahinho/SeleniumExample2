@@ -158,7 +158,7 @@ public class Billing extends BaseTest {
     @Test(dataProvider = "DescargaFacMes")
     public void DescargaFacMes(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("DescargaFacMes", "");
+        startTest("DescargaFacMes", "Client: "+userName+"/"+password);
 
 
         ChatbotPage chatbotPage = new ChatbotPage(driver);
@@ -201,7 +201,7 @@ public class Billing extends BaseTest {
     public void CicloFac(String userName, String password, String pathToEvidence) throws InterruptedException {
 
 
-        startTest("CicloFac", "");
+        startTest("CicloFac", "Client: "+userName+"/"+password);
 
         ChatbotPage chatbotPage = new ChatbotPage(driver);
         chatbotPage.Login(userName, password,pathToEvidence+"\\1 user.png");
@@ -241,7 +241,7 @@ public class Billing extends BaseTest {
     @Test(dataProvider = "FacFutura")
     public void FacFutura(String userName, String password, String pathToEvidence) throws InterruptedException{
 
-        startTest("FacFutura", "");
+        startTest("FacFutura", "Client: "+userName+"/"+password);
 
         ChatbotPage chatbotPage = new ChatbotPage(driver);
         chatbotPage.Login(userName, password,pathToEvidence+"\\1 user.png");
@@ -278,7 +278,7 @@ public class Billing extends BaseTest {
     @Test(dataProvider = "FacturaTerminal")
     public void FacturaTerminal(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("FacturaTerminal", "");
+        startTest("FacturaTerminal", "Client: "+userName+"/"+password);
 
         ChatbotPage chatbotPage = new ChatbotPage(driver);
         chatbotPage.Login(userName, password, pathToEvidence+"\\1 user.png");
@@ -314,7 +314,7 @@ public class Billing extends BaseTest {
     @Test(dataProvider = "FacPasada")
     public void FacPasada(String userName, String password, String pathToEvidence) throws InterruptedException{
 
-        startTest("FacPasada", "");
+        startTest("FacPasada", "Client: "+userName+"/"+password);
 
         ChatbotPage chatbotPage = new ChatbotPage(driver);
         chatbotPage.Login(userName, password, pathToEvidence+"\\1 user.png");

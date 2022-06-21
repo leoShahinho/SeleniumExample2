@@ -16,7 +16,7 @@ public class Extras extends BaseTest {
     @Test(dataProvider = "HBO")
     public void HBO(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("HBO", "");
+        startTest("HBO", "Client: "+userName+"/"+password);
 
         String response1 = "Con ";
         String response2 = "HBO Max";
@@ -77,7 +77,7 @@ public class Extras extends BaseTest {
     @Test(dataProvider = "SecureNet")
     public void SecureNet(String userName, String password, String pathToEvidence) throws InterruptedException{
 
-        startTest("SecureNet", "");
+        startTest("SecureNet", "Client: "+userName+"/"+password);
 
         String response1 = "Veo que tienes Secure Net ";
         String response2 = "activado";
@@ -142,7 +142,7 @@ public class Extras extends BaseTest {
     @Test(dataProvider = "InfoDisneyPlus")
     public void InfoDisneyPlus(String userName, String password, String pathToEvidence) throws InterruptedException{
 
-        startTest("InfoDisneyPlus", userName);
+        startTest("InfoDisneyPlus", "Client: "+userName+"/"+password);
 
         String response1 = "Te lo tengo que decir porque te estás perdiendo algo increíble: no tienes activado Disney+, y viene de manera ";
         String response2 = "gratuita con tu Hogar Ilimitable";

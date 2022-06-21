@@ -19,7 +19,7 @@ public class ReparaciónTerminal extends BaseTest {
     @Test(dataProvider = "ReparacionTerminal")
     public void ReparaciónTerminal(String userName, String password, String pathToEvicence) throws InterruptedException {
 
-        startTest("ReparacionTerminal", userName+"/"+password);
+        startTest("ReparacionTerminal", "Client: "+userName+"/"+password);
 
         String response1 = "Vale, lo primero que necesito saber es el motivo de tu consulta. ¿Quieres reparar tu móvil o conocer el estado de una reparación?";
         String response2 = "De acuerdo, para llevarlo a reparar, te recomiendo ";

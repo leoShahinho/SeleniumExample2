@@ -15,7 +15,7 @@ public class Ofertas extends BaseTest {
     @Test(dataProvider = "LineaAdicional")
     public void LineaAdicional(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("LineaAdicional", userName);
+        startTest("LineaAdicional", "Client: "+userName+"/"+password);
 
         String response1 = "Así que quieres añadir una línea nueva... ¿Qué tipo de línea te interesa?";
         String response2 = "Estás de suerte, ¡tenemos una oferta para ti! Puedes ";
@@ -65,7 +65,7 @@ public class Ofertas extends BaseTest {
     @Test(dataProvider = "OneNumber_Partis")
     public void OneNumber_Partis(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("OneNumber_Partis", "");
+        startTest("OneNumber_Partis", "Client: "+userName+"/"+password);
 
         String response1 = "Con ";
         String response2 = "OneNumber,";
@@ -143,7 +143,7 @@ public class Ofertas extends BaseTest {
     @Test(dataProvider = "Renon")
     public void Renon(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("Renon", "");
+        startTest("Renon", "Client: "+userName+"/"+password);
 
         String response1 = "Como los descuentos están pensados para ti necesitas atención personalizada.";
         String response2 = "Para eso tengo que ponerte en contacto con un humano. ¿Quieres que te atienda cuando esté disponible?";
@@ -188,7 +188,7 @@ public class Ofertas extends BaseTest {
     @Test(dataProvider = "CTimposible")
     public void CTimposible(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("CTimposible", "");
+        startTest("CTimposible", "Client: "+userName+"/"+password);
 
         String reponse1 = "Cualquier compra de ";
         String reponse2 = "nuestro catálogo";
@@ -237,7 +237,7 @@ public class Ofertas extends BaseTest {
     @Test(dataProvider = "CTposible")
     public void CTposible(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-        startTest("CTposible", "");
+        startTest("CTposible", "Client: "+userName+"/"+password);
 
         String response1 = "Pues estás en el sitio correcto. ";
         String response2 = "Visita  nuestro catálogo";

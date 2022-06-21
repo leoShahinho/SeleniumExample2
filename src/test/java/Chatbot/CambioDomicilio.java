@@ -15,7 +15,7 @@ public class CambioDomicilio extends BaseTest {
     @Test(dataProvider = "CambioDomicilio")
     public void CambioDomicilio(String userName, String password, String pathToEvidence) throws Exception  {
 
-        startTest("CambioDomicilio", "");
+        startTest("CambioDomicilio", "Client: "+userName+"/"+password);
 
         String response1 = "Antes de realizar un traslado te recomiendo ";
         String response2 = "consultar las condiciones de cambio de domicilio";

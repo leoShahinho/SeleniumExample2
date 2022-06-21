@@ -15,7 +15,7 @@ public class Roaming extends BaseTest {
     @Test(dataProvider = "RoamingME")
     public void RoamingME(String userName, String password, String pathToEvicence) throws Exception {
 
-        startTest("RoamingME", userName+"/"+password);
+        startTest("RoamingME", "Client: "+userName+"/"+password);
 
         String response1 = "Para darte la información que necesitas, dime, ¿desde dónde usarías tu línea?";
         String response2 = "Puedes consultar tus dudas, ver la tarifa que tendrías en cada país y gestionar los permisos de Roaming ";
@@ -62,7 +62,7 @@ public class Roaming extends BaseTest {
     @Test(dataProvider = "RoamingPartis")
     public void RoamingPartis(String userName, String password, String pathToEvicence) throws InterruptedException {
 
-        startTest("RoamingPartis", userName+"/"+password);
+        startTest("RoamingPartis", "Client: "+userName+"/"+password);
 
         String response1 = "Para darte la información que necesitas, dime, ¿desde dónde usarías tu línea?";
         String response2 = "Puedes consultar tus dudas, ver la tarifa que tendrías en cada país y gestionar los permisos de Roaming ";

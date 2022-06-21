@@ -16,7 +16,7 @@ public class ConsultasTV extends BaseTest {
 	@Test(dataProvider = "MandoTele")
 	public void MandoTele(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-		startTest("MandoTele", "");
+		startTest("MandoTele", "Client: "+userName+"/"+password);
 
 		String response1 = "Dime qué te gustaría hacer exactamente:";
 		String response2 = "conocer cómo funciona tu mando";
@@ -66,7 +66,7 @@ public class ConsultasTV extends BaseTest {
 	@Test(dataProvider = "TV_Multi_Partis")
 	public void TV_Multi_Partis(String userName, String password, String pathToEvidence) throws InterruptedException{
 
-		startTest("TV_Multi_Partis", "");
+		startTest("TV_Multi_Partis", "Client: "+userName+"/"+password);
 
 		String response1 = "Veo que tienes TV Multidispositivo activo y vinculado a cain.carmona@hotmail.com.";
 		String response2 = "¿Qué quieres hacer?";
@@ -122,7 +122,7 @@ public class ConsultasTV extends BaseTest {
 	@Test(dataProvider = "BajaPackTV")
 	public void BajaPackTV(String userName, String password, String pathToEvidence) throws InterruptedException {
 
-		startTest("AmazonPrimeActivo", "");
+		startTest("AmazonPrimeActivo", "Client: "+userName+"/"+password);
 
 		String response1 = "Vale, ¿qué es lo que quieres dar de baja de Vodafone TV?";
 		String response2 = "En ese caso, aquí puedes ";
@@ -174,7 +174,7 @@ public class ConsultasTV extends BaseTest {
 	public void AveriaDisneyPlus(String userName, String password, String pathToEvidence) throws InterruptedException{
 
 
-		startTest("AmazonPrimeActivo", "");
+		startTest("AmazonPrimeActivo", "Client: "+userName+"/"+password);
 
 		String response1 = "Vale, para ayudarte mejor, ¿tu problema tiene que ver con alguno de los siguientes?";
 		String response2 = "Vale, te cuento. Todavía estamos trabajando para tener la app de Disney+ en el decodificador de Vofadone TV. Te avisaremos en cuanto esté.";

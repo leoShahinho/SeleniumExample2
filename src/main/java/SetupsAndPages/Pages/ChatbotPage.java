@@ -2,6 +2,7 @@ package SetupsAndPages.Pages;
 
 import SetupsAndPages.ExcelDataConfig;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,7 +41,6 @@ public class ChatbotPage extends BasePage {
     @FindBy(xpath = "//a[@title=\"Conoce tus productos\"]")
     WebElement conoceTusProductos;
 
-    
 
     public void Login(String user, String pass, String path) {
         waitForElementToBeVisible_WebElement(username);
@@ -54,8 +54,6 @@ public class ChatbotPage extends BasePage {
         System.out.println(user+" logged in successfully");
 
     }
-
-
 
     public Object[][] getCredentialsData( int testCaseRow){
 
@@ -137,18 +135,22 @@ public class ChatbotPage extends BasePage {
 
     public void SendMessage(String text) throws InterruptedException{
 
+        try{
         waitForElementToBeVisible_WebElement(replyBox);
         replyBox.sendKeys(text);
         waitForElementToBeVisible_WebElement(sendButton);
         sendButton.click();
-        Thread.sleep(1000);
+        Thread.sleep(1000);}
+        catch (ElementNotInteractableException ex){}
 
     }
 
     public boolean NewMessageCheck(String agentMsg , int msgnum) throws InterruptedException{
 
     	WebElement AgentMsg = waitForElementToBeVisible(By.xpath("(//*[text()='"+agentMsg+"'])["+(msgnum+1)+"]"));
-        System.out.println(AgentMsg.getText());
+
+    	if (AgentMsg!=null){
+    	System.out.println(AgentMsg.getText());}
 
         return true;
     }
@@ -158,12 +160,41 @@ public class ChatbotPage extends BasePage {
     	return size;
 	}
 
+	public void CheckNewRealtiveMsg(String msgOption1, String msgOption2, int msgnumOp1, int msgnumOp2) throws InterruptedException {
+
+        Thread.sleep(10000);
+        if (driver.findElements(By.xpath("(//*[text()='"+msgOption1+"'])["+(msgnumOp1+1)+"]")).size()<0){
+            NewMessageCheck(msgOption1,msgnumOp1);
+            System.out.println("Relative msg is option 1");
+         }
+        else if(driver.findElements(By.xpath("(//*[text()='"+msgOption2+"'])["+(msgnumOp2+1)+"]")).size()<0){
+            NewMessageCheck(msgOption2,msgnumOp2);
+            System.out.println("Relative msg is option 2");
+        }
+    }
+
+    public void skipLastConversationInquery() throws InterruptedException {
+
+        Thread.sleep(25000);
+        if (driver.findElements(By.xpath("//button[@title='Sí, quiero preguntarte otra cosa']")).size()>0)
+        {
+            driver.findElement(By.xpath("//button[@title='Sí, quiero preguntarte otra cosa']")).click();
+            System.out.println("Last conversation inquery skipped");
+        }
+        else if (driver.findElements(By.xpath("//button[@title='No, otra consulta']")).size()>0)
+        {
+            driver.findElement(By.xpath("//button[@title='No, otra consulta']")).click();
+            System.out.println("Last conversation inquery skipped");
+
+        }
+        else
+            System.out.println("No last conversation inquery from chatBot");
+    }
+
     public void EndConv(){
 
         waitForElementToBeVisible_WebElement(End_Conv_Button);
         End_Conv_Button.click();
     }
-
-
 
 }
